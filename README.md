@@ -1,6 +1,6 @@
 # resilver-orders
 
-A synthetic test fixture. `orders` is a tiny Python package that depends on a toy HTTP
+A synthetic test fixture (102943). `orders` is a tiny Python package that depends on a toy HTTP
 library, `platform-http`, which exists only as the two wheels under `ci/wheels/`.
 
 It is here so that a software-maintenance tool can be exercised against a real code host.
