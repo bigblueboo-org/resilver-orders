@@ -39,7 +39,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "platform-http", specifier = ">=4.2.0" }]
+requires-dist = [{ name = "platform-http", specifier = ">=3,<4" }]
 
 [package.metadata.requires-dev]
 dev = [
@@ -57,10 +57,10 @@ wheels = [
 
 [[package]]
 name = "platform-http"
-version = "4.2.0"
+version = "3.4.0"
 source = { registry = "../registry/pypi" }
 wheels = [
-    { path = "platform_http-4.2.0-py3-none-any.whl" },
+    { path = "platform_http-3.4.0-py3-none-any.whl" },
 ]
 
 [[package]]
