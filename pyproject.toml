@@ -1,0 +1,14 @@
+[project]
+name = "orders"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["platform-http>=3,<4"]
+
+[dependency-groups]
+dev = ["pytest", "coverage"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.uv]
+environments = ["sys_platform == 'linux'"]

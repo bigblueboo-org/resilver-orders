@@ -1,0 +1,18 @@
+name: tests
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pytest, and the toy library the manifest asks for from the wheels in this repository
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install --quiet pytest
+          .venv/bin/pip install --quiet --no-index --find-links ci/wheels "$(python3 ci/requirement.py)"
+      - name: Run the tests
+        run: .venv/bin/python -m pytest -q

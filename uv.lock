@@ -1,0 +1,94 @@
+version = 1
+revision = 2
+requires-python = ">=3.12"
+resolution-markers = [
+    "sys_platform == 'linux'",
+]
+supported-markers = [
+    "sys_platform == 'linux'",
+]
+
+[[package]]
+name = "coverage"
+version = "7.17.3"
+source = { registry = "../registry/pypi" }
+wheels = [
+    { path = "coverage-7.17.3-cp312-cp312-manylinux_2_5_x86_64.whl" },
+]
+
+[[package]]
+name = "iniconfig"
+version = "2.3.1"
+source = { registry = "../registry/pypi" }
+wheels = [
+    { path = "iniconfig-2.3.1-py3-none-any.whl" },
+]
+
+[[package]]
+name = "orders"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "platform-http", marker = "sys_platform == 'linux'" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "coverage", marker = "sys_platform == 'linux'" },
+    { name = "pytest", marker = "sys_platform == 'linux'" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "platform-http", specifier = ">=3,<4" }]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "coverage" },
+    { name = "pytest" },
+]
+
+[[package]]
+name = "packaging"
+version = "26.3"
+source = { registry = "../registry/pypi" }
+wheels = [
+    { path = "packaging-26.3-py3-none-any.whl" },
+]
+
+[[package]]
+name = "platform-http"
+version = "3.4.0"
+source = { registry = "../registry/pypi" }
+wheels = [
+    { path = "platform_http-3.4.0-py3-none-any.whl" },
+]
+
+[[package]]
+name = "pluggy"
+version = "1.7.0"
+source = { registry = "../registry/pypi" }
+wheels = [
+    { path = "pluggy-1.7.0-py3-none-any.whl" },
+]
+
+[[package]]
+name = "pygments"
+version = "2.21.0"
+source = { registry = "../registry/pypi" }
+wheels = [
+    { path = "pygments-2.21.0-py3-none-any.whl" },
+]
+
+[[package]]
+name = "pytest"
+version = "9.2.0"
+source = { registry = "../registry/pypi" }
+dependencies = [
+    { name = "iniconfig", marker = "sys_platform == 'linux'" },
+    { name = "packaging", marker = "sys_platform == 'linux'" },
+    { name = "pluggy", marker = "sys_platform == 'linux'" },
+    { name = "pygments", marker = "sys_platform == 'linux'" },
+]
+wheels = [
+    { path = "pytest-9.2.0-py3-none-any.whl" },
+]
